@@ -37,7 +37,7 @@ export const Hero = () => {
 					/>
 
 					<p className="mb-4 text-center text-sm md:text-lg md:tracking-wider lg:text-2xl">
-						Hi, I&apos;m Aryan, an AI engineer and full-stack developer building production-ready systems.
+						Hi, I&apos;m Aryan, an AI Engineer and full-stack developer building production-ready systems.
 					</p>
 
 					<Link href="#projects" className="md:mt-10">

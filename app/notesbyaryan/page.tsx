@@ -13,6 +13,26 @@ import { Spotlight } from "@/components/ui/spotlight";
 const performances = [
   {
     id: 1,
+    title: "Qaayde Se",
+    titleHindi: "क़ायदे से",
+    description: "दिल जला के मुस्कुराने की आदत 🫠",
+    vibe: "दिल जला के मुस्कुराने की जो आदत हुई है मुझे….",
+    link: "https://www.instagram.com/p/DUiukYvj1pY/",
+    accent: "from-sky-500 to-blue-600",
+    pattern: "radial-gradient(circle at 60% 80%, rgba(14, 165, 233, 0.25) 0%, transparent 50%), radial-gradient(circle at 40% 20%, rgba(37, 99, 235, 0.2) 0%, transparent 40%)",
+  },
+  {
+    id: 2,
+    title: "Main Rahoon Ya Na Rahoon",
+    titleHindi: "मैं रहूँ या ना रहूँ",
+    description: "Nandi Hills, Bangalore 🏔️",
+    vibe: "कुछ कहूँ या ना कहूँ, तुम मुझको सदा सुनते रहना 🫂",
+    link: "https://www.instagram.com/p/DT-qnIpD2Eb/",
+    accent: "from-emerald-500 to-teal-600",
+    pattern: "radial-gradient(circle at 30% 70%, rgba(16, 185, 129, 0.25) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(20, 184, 166, 0.2) 0%, transparent 40%)",
+  },
+  {
+    id: 3,
     title: "Ho Gaya Hai Tujhko",
     titleHindi: "हो गया है तुझको तो प्यार सजना",
     description: "Dil ki awaaz, aap tak 🫣",
@@ -22,7 +42,7 @@ const performances = [
     pattern: "radial-gradient(circle at 30% 70%, rgba(244, 63, 94, 0.25) 0%, transparent 50%), radial-gradient(circle at 70% 20%, rgba(236, 72, 153, 0.2) 0%, transparent 40%)",
   },
   {
-    id: 2,
+    id: 4,
     title: "Barbaad",
     titleHindi: "बर्बाद",
     description: "Kar dega Barbaad ishq mujhe 🎶",
@@ -32,7 +52,7 @@ const performances = [
     pattern: "radial-gradient(circle at 60% 80%, rgba(245, 158, 11, 0.25) 0%, transparent 50%), radial-gradient(circle at 20% 40%, rgba(249, 115, 22, 0.2) 0%, transparent 40%)",
   },
   {
-    id: 3,
+    id: 5,
     title: "Haal-E-Dil",
     titleHindi: "हाल-ए-दिल",
     description: "काश यूं होता, हर शाम साथ तू होता 🫠",
@@ -42,7 +62,7 @@ const performances = [
     pattern: "radial-gradient(circle at 80% 60%, rgba(6, 182, 212, 0.25) 0%, transparent 50%), radial-gradient(circle at 30% 20%, rgba(20, 184, 166, 0.2) 0%, transparent 40%)",
   },
   {
-    id: 4,
+    id: 6,
     title: "Khamoshiyan",
     titleHindi: "खामोशियाँ",
     description: "Cover • Arijit Singh vibes ✨",
@@ -52,7 +72,7 @@ const performances = [
     pattern: "radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.2) 0%, transparent 40%)",
   },
   {
-    id: 5,
+    id: 7,
     title: "Mujhe Tum Nazar Se",
     titleHindi: "मुझे तुम नज़र से",
     description: "Soulful Cover",
@@ -62,7 +82,7 @@ const performances = [
     pattern: "radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.3) 0%, transparent 50%), radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.2) 0%, transparent 40%)",
   },
   {
-    id: 6,
+    id: 8,
     title: "Har Kisi Ko",
     titleHindi: "हर किसी को नहीं मिलता",
     description: "Farewell '26 • IIIT Dharwad",
@@ -70,26 +90,6 @@ const performances = [
     link: "https://www.instagram.com/reel/DRdYboGjBq-/",
     accent: "from-fuchsia-500 to-purple-600",
     pattern: "radial-gradient(circle at 50% 70%, rgba(217, 70, 239, 0.25) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(168, 85, 247, 0.2) 0%, transparent 40%)",
-  },
-  {
-    id: 7,
-    title: "Main Rahoon Ya Na Rahoon",
-    titleHindi: "मैं रहूँ या ना रहूँ",
-    description: "Nandi Hills, Bangalore • Armaan Malik Cover",
-    vibe: "कुछ कहूँ या ना कहूँ, तुम मुझको सदा सुनते रहना 🫂",
-    link: "https://www.instagram.com/p/DT-qnIpD2Eb/",
-    accent: "from-emerald-500 to-teal-600",
-    pattern: "radial-gradient(circle at 30% 70%, rgba(16, 185, 129, 0.25) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(20, 184, 166, 0.2) 0%, transparent 40%)",
-  },
-  {
-    id: 8,
-    title: "Qaayde Se",
-    titleHindi: "क़ायदे से",
-    description: "Soulful Cover • Arijit Singh × Papon",
-    vibe: "दिल जला के मुस्कुराने की जो आदत हुई है मुझे…. 🫠",
-    link: "https://www.instagram.com/p/DUiukYvj1pY/",
-    accent: "from-sky-500 to-blue-600",
-    pattern: "radial-gradient(circle at 60% 80%, rgba(14, 165, 233, 0.25) 0%, transparent 50%), radial-gradient(circle at 40% 20%, rgba(37, 99, 235, 0.2) 0%, transparent 40%)",
   },
 ];
 
