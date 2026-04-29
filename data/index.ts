@@ -135,8 +135,8 @@ export const projects = [
 		des: "A personal developer portfolio designed to showcase my journey, projects, skills, and technical growth. Built using React.js, Next.js, Three.js, and Tailwind CSS with smooth animations, bento-style layout, and dynamic 3D elements.",
 		img: "/project5.svg",
 		iconLists: ["/re.svg", "/next.svg", "/ts.svg", "/three.svg", "/tail.svg"],
-		sourceCode: "https://github.com/Aryanjstar/Aryan_Jaiswal_Portfolio",
-		liveLink: "https://aryanjaiswal.me",
+		sourceCode: "https://github.com/Aryanjstar/Aryan_Jaiswal_Portfolio_V1",
+		liveLink: "https://aryanjaiswal.in",
 	},
 	{
 		id: 8,

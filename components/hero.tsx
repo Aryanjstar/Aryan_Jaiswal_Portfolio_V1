@@ -56,7 +56,7 @@ export const Hero = () => {
 						variants={fadeUp}
 						className="max-w-96 text-center text-xs uppercase tracking-widest text-blue-100"
 					>
-						AI Engineer &bull; Full Stack Developer &bull; Builder
+						AI Engineer &bull; Published Researcher &bull; Full Stack Developer
 					</motion.h2>
 
 					<motion.div variants={fadeUp}>
