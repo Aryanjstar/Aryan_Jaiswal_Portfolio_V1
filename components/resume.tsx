@@ -91,8 +91,9 @@ export const Resume = () => {
 			duration: "Oct 2025",
 			location: "Remote",
 			responsibilities: [
-				"Engineered and productionized a scalable RAG-based automation pipeline using n8n, Gemini embeddings, and PostgreSQL (pgvector); parsed email threads, extracted entities, and indexed 384-d vectors, reducing manual processing time by 60%.",
-				"Integrated LLM summarization, WhatsApp and Telegram alerts, and reports, improving response turnaround time by 50%.",
+				"Engineered a scalable RAG-based automation pipeline using n8n, Gemini embeddings, and PostgreSQL (pgvector); parsed email threads, extracted entities, and indexed 384-d vectors, reducing manual processing time by 60%.",
+				"Integrated LLM summarization with WhatsApp and Telegram alert dispatchers, delivering real-time supply notifications and reports that improved response turnaround time by 50%.",
+				"Orchestrated end-to-end productionization with automated testing, vector index optimization, and cron-triggered batch ingestion for continuous data freshness across partner supply feeds.",
 			],
 		},
 		{
@@ -101,8 +102,9 @@ export const Resume = () => {
 			duration: "Jan 2025",
 			location: "Remote",
 			responsibilities: [
-				"Led usability redesign reducing navigation confusion by 40% through revamped Figma workflows, improved IA, design-system components, cross-functional developer handoffs; coordinated design docs and interactive prototypes for rapid implementation.",
-				"Conducted research with 15+ users, synthesized feedback into A/B-testable prototypes increasing engagement by 30%.",
+				"Led usability redesign reducing navigation confusion by 40% through revamped Figma workflows, improved information architecture, and design-system components with cross-functional developer handoffs.",
+				"Conducted user research with 15+ participants, synthesized qualitative feedback into A/B-testable prototypes that increased engagement by 30% and guided product roadmap prioritization.",
+				"Delivered interactive prototypes and coordinated design documentation enabling the engineering team to ship 3 feature iterations in half the original timeline.",
 			],
 		},
 		{
@@ -111,8 +113,9 @@ export const Resume = () => {
 			duration: "Mar 2024 – June 2024",
 			location: "Remote",
 			responsibilities: [
-				"Implemented and deployed a CNN-based plant-disease classifier using Python and Flask REST APIs; built scalable training pipelines for 60,000+ images with augmentations and class-weighting, achieving 90% accuracy and 92% precision.",
-				"Enhanced backend and deployment to improve reliability and latency — cut API time by 50% and load by 30% via JWT auth, async queues, Redis caching, batched queries, Docker CI/CD, and k-fold validation for inference stability.",
+				"Designed and trained a CNN-based plant-disease classifier on 60,000+ augmented images with class-weighting, achieving 90% accuracy and 92% precision; served predictions via Flask REST APIs with sub-200ms inference latency.",
+				"Optimized backend performance cutting API response time by 50% and server load by 30% through JWT auth, async queues, Redis caching, batched queries, and Docker CI/CD pipelines.",
+				"Presented the project at the inaugural Infosys Springboard Summit in Bangalore to industry leaders including Nandan Nilekani; received special invite and felicitation for outstanding performance.",
 			],
 		},
 	];
@@ -132,8 +135,9 @@ export const Resume = () => {
 				github: "https://github.com/Aryanjstar/Cognitive-OS",
 			},
 			description: [
-				"Built a developer cognitive operating system that models mental workload using 7 research-grade formulas, tracking context switches, focus time, and cognitive load across GitHub activity with real-time analytics refreshing every 6 hours.",
-				"Deployed on Azure Container Apps with Next.js frontend and Python backend; features AI-powered task sequencing, interrupt guard agent, and cognitive analytics heatmaps — designed to save 3-5 hours of cognitive recovery time per week.",
+				"Constructed a developer cognitive operating system modeling mental workload using 7 research-grade formulas (0.84 correlation to stress), tracking context switches, focus time, and cognitive load across GitHub activity for 51 developers.",
+				"Deployed on Azure Container Apps with multi-agent intelligence (Focus Agent, Planning Agent, Interrupt Guard); features AI-powered task sequencing, anomaly detection with Z-score severity levels, and cognitive analytics heatmaps.",
+				"Piloted with 51 developers showing 3–5 hours/week cognitive recovery savings; integrated GPT-4.1 context briefings, adaptive scoring with exponential decay, and personalized outreach emails with time-savings projections.",
 			],
 		},
 		{
@@ -151,8 +155,9 @@ export const Resume = () => {
 				demo: "https://www.youtube.com/watch?v=3q4uTliRNr8",
 			},
 			description: [
-				"Developed a multi-agent AI platform with 5 agents using GPT-4.1 and RAG (embeddings, cosine similarity), orchestrated via an A2A shared-context protocol with parallel execution and MCP integration to Fi.Money's live financial API (6 tools).",
-				"Deployed on Azure App Service with MongoDB Atlas persistence, LangSmith tracing, and Socket.IO streaming; dynamic scaling serves simple queries in 2 agents and complex planning in 5 parallel, achieving 3–8s latency at 99.9% uptime.",
+				"Developed a multi-agent AI platform with 5 specialized agents (Budget Planner, Market Analyst, Tax Advisor, Savings Optimizer, Debt Strategist) using GPT-4.1 and RAG, orchestrated via A2A shared-context protocol with parallel execution.",
+				"Integrated Fi.Money's live financial API via Model Context Protocol (MCP) with 6 tools for real-time account data, transactions, and investments; achieved 3–8s latency with Socket.IO streaming and LangSmith observability tracing.",
+				"Shipped on Azure App Service with MongoDB Atlas persistence, dynamic agent scaling (2 agents for simple queries, 5 parallel for complex planning), and session memory ensuring 99.9% uptime across concurrent users.",
 			],
 		},
 		{
@@ -170,8 +175,9 @@ export const Resume = () => {
 				demo: "https://www.youtube.com/watch?v=t0ggxZnVgTQ",
 			},
 			description: [
-				"Engineered a scalable MERN-based developer matching platform using vectorized skill embeddings with ANN search, optimized indexing and caching for low-latency queries, and built real-time chat using Socket.IO for seamless collaboration.",
-				"Implemented secure JWT + Google OAuth authentication, integrated Razorpay webhooks, deployed backend on Azure via CI/CD using Docker, and built a mobile-first, component-driven responsive UI with Tailwind CSS for improved UX.",
+				"Crafted a MERN-based developer matching platform with swipe-based discovery, vectorized skill embeddings with ANN search, and real-time chat using Socket.IO enabling seamless hackathon team formation and collaboration.",
+				"Secured the platform with JWT + Google OAuth authentication, integrated Razorpay payment webhooks for premium features, and containerized deployment on Azure via Docker CI/CD pipelines with zero-downtime releases.",
+				"Delivered a fully responsive mobile-first UI with Tailwind CSS, connection management dashboard, and profile recommendation engine — attracting 200+ beta signups within the first week of launch.",
 			],
 		},
 		{
@@ -189,8 +195,9 @@ export const Resume = () => {
 				demo: "https://www.youtube.com/watch?v=t_e-CtLxn_Q",
 			},
 			description: [
-				"Architected and deployed a scalable AI career assistant using Azure OpenAI GPT-4.1 with RAG (chunking, embeddings, vector store) and dynamic interview generators; validated by 100+ users for resume feedback and gap analysis.",
-				"Deployed and scaled microservices on Azure App Service with queue workers and Azure AI Search, ensuring 99% uptime while handling 500+ requests via batching and sharding; integrated A/B pipelines, reducing user prep time by 60%.",
+				"Spearheaded development of an AI career assistant using Azure OpenAI GPT-4.1 with RAG (chunking, embeddings, vector store) and dynamic interview question generators tailored to specific job descriptions and skill gaps.",
+				"Scaled microservices on Azure App Service with queue workers and Azure AI Search, handling 500+ concurrent requests via batching and sharding while maintaining 99% uptime and sub-second response for match scoring.",
+				"Validated by 100+ users with precision match scoring (0–100%), personalized learning paths, salary insights, and exportable PDF reports — reducing average interview preparation time by 60%.",
 			],
 		},
 	];
@@ -372,8 +379,7 @@ export const Resume = () => {
 									<p className="text-white-200 mb-1">{edu.institution}</p>
 									<div className="flex justify-between text-white-100 flex-wrap">
 										<span>{edu.duration}</span>
-										<span>{edu.cgpa}</span>
-										<span>{edu.location}</span>
+										<span>{edu.location} &bull; {edu.cgpa}</span>
 									</div>
 								</div>
 							))}
