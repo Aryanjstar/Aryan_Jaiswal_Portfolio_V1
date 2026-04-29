@@ -52,7 +52,7 @@ export const FloatingNav = ({ navItems, className }: FloatingNavProps) => {
 					duration: 0.2,
 				}}
 				className={cn(
-					"fixed inset-x-0 top-4 z-[5000] mx-auto flex max-w-fit items-center justify-center rounded-3xl border border-white/[0.1] bg-black-100/80 backdrop-blur-lg shadow-[0px_20px_50px_rgba(8,_112,_184,_0.7)] saturate-150 px-3 py-2 sm:px-6 sm:py-3",
+					"fixed inset-x-0 top-4 z-[5000] mx-auto flex max-w-fit items-center justify-center rounded-3xl border border-white/[0.1] bg-black-100/80 px-3 py-2 sm:px-6 sm:py-3 backdrop-blur-lg saturate-150 shadow-[0px_20px_50px_rgba(8,_112,_184,_0.7)]",
 					className
 				)}
 			>
@@ -61,7 +61,8 @@ export const FloatingNav = ({ navItems, className }: FloatingNavProps) => {
 						key={`link=${idx}`}
 						href={navItem.link}
 						className={cn(
-							"relative flex items-center space-x-1 rounded-full px-2 py-1.5 text-xs font-medium text-neutral-50 transition-colors duration-300 hover:text-purple sm:px-3 sm:py-2 sm:text-sm"
+							"relative flex items-center space-x-1 rounded-full px-2 py-1.5 text-xs font-medium transition-colors duration-300 sm:px-3 sm:py-2 sm:text-sm",
+							"text-neutral-50 hover:text-purple"
 						)}
 					>
 						<span className="block">{navItem.name}</span>

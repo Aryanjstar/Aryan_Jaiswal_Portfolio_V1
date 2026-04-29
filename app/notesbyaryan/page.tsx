@@ -4,94 +4,16 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaPlay, FaSpotify, FaHeadphones, FaArrowLeft } from "react-icons/fa6";
-import { IoMusicalNotes, IoHome } from "react-icons/io5";
+import { IoMusicalNotes } from "react-icons/io5";
 import { BsMusicNoteBeamed } from "react-icons/bs";
 import { HiSparkles } from "react-icons/hi2";
 
+import { FloatingNav } from "@/components/ui/floating-nav";
 import { Spotlight } from "@/components/ui/spotlight";
+import { navItems } from "@/data";
+import performancesData from "@/data/performances.json";
 
-const performances = [
-  {
-    id: 1,
-    title: "Qaayde Se",
-    titleHindi: "क़ायदे से",
-    description: "दिल जला के मुस्कुराने की आदत 🫠",
-    vibe: "दिल जला के मुस्कुराने की जो आदत हुई है मुझे….",
-    link: "https://www.instagram.com/p/DUiukYvj1pY/",
-    accent: "from-sky-500 to-blue-600",
-    pattern: "radial-gradient(circle at 60% 80%, rgba(14, 165, 233, 0.25) 0%, transparent 50%), radial-gradient(circle at 40% 20%, rgba(37, 99, 235, 0.2) 0%, transparent 40%)",
-  },
-  {
-    id: 2,
-    title: "Main Rahoon Ya Na Rahoon",
-    titleHindi: "मैं रहूँ या ना रहूँ",
-    description: "Nandi Hills, Bangalore 🏔️",
-    vibe: "कुछ कहूँ या ना कहूँ, तुम मुझको सदा सुनते रहना 🫂",
-    link: "https://www.instagram.com/p/DT-qnIpD2Eb/",
-    accent: "from-emerald-500 to-teal-600",
-    pattern: "radial-gradient(circle at 30% 70%, rgba(16, 185, 129, 0.25) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(20, 184, 166, 0.2) 0%, transparent 40%)",
-  },
-  {
-    id: 3,
-    title: "Ho Gaya Hai Tujhko",
-    titleHindi: "हो गया है तुझको तो प्यार सजना",
-    description: "Dil ki awaaz, aap tak 🫣",
-    vibe: "Jab dil ne finally baat keh di",
-    link: "https://www.instagram.com/p/DTnamJTjzLB/",
-    accent: "from-rose-500 to-pink-600",
-    pattern: "radial-gradient(circle at 30% 70%, rgba(244, 63, 94, 0.25) 0%, transparent 50%), radial-gradient(circle at 70% 20%, rgba(236, 72, 153, 0.2) 0%, transparent 40%)",
-  },
-  {
-    id: 4,
-    title: "Barbaad",
-    titleHindi: "बर्बाद",
-    description: "Kar dega Barbaad ishq mujhe 🎶",
-    vibe: "When love hits different",
-    link: "https://www.instagram.com/p/DSwpvRij4BW/",
-    accent: "from-amber-500 to-orange-600",
-    pattern: "radial-gradient(circle at 60% 80%, rgba(245, 158, 11, 0.25) 0%, transparent 50%), radial-gradient(circle at 20% 40%, rgba(249, 115, 22, 0.2) 0%, transparent 40%)",
-  },
-  {
-    id: 5,
-    title: "Haal-E-Dil",
-    titleHindi: "हाल-ए-दिल",
-    description: "काश यूं होता, हर शाम साथ तू होता 🫠",
-    vibe: "चुपचप दिल ना यूं रोता",
-    link: "https://www.instagram.com/p/DSh1nnYj3xF/",
-    accent: "from-cyan-500 to-teal-600",
-    pattern: "radial-gradient(circle at 80% 60%, rgba(6, 182, 212, 0.25) 0%, transparent 50%), radial-gradient(circle at 30% 20%, rgba(20, 184, 166, 0.2) 0%, transparent 40%)",
-  },
-  {
-    id: 6,
-    title: "Khamoshiyan",
-    titleHindi: "खामोशियाँ",
-    description: "Cover • Arijit Singh vibes ✨",
-    vibe: "खामोशियाँ आकाश है, तुम उड़ने तो आओ ज़रा :)",
-    link: "https://www.instagram.com/p/DSAwZVzk950/",
-    accent: "from-violet-500 to-purple-600",
-    pattern: "radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.2) 0%, transparent 40%)",
-  },
-  {
-    id: 7,
-    title: "Mujhe Tum Nazar Se",
-    titleHindi: "मुझे तुम नज़र से",
-    description: "Soulful Cover",
-    vibe: "When words fail, music speaks",
-    link: "https://www.instagram.com/reel/DR0dnM5k46A/",
-    accent: "from-indigo-500 to-violet-600",
-    pattern: "radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.3) 0%, transparent 50%), radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.2) 0%, transparent 40%)",
-  },
-  {
-    id: 8,
-    title: "Har Kisi Ko",
-    titleHindi: "हर किसी को नहीं मिलता",
-    description: "Farewell '26 • IIIT Dharwad",
-    vibe: "The night I poured my heart out on stage",
-    link: "https://www.instagram.com/reel/DRdYboGjBq-/",
-    accent: "from-fuchsia-500 to-purple-600",
-    pattern: "radial-gradient(circle at 50% 70%, rgba(217, 70, 239, 0.25) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(168, 85, 247, 0.2) 0%, transparent 40%)",
-  },
-];
+const performances = performancesData;
 
 // SVG Pattern component for cards
 const MusicPattern = ({ className }: { className?: string }) => (
@@ -136,24 +58,7 @@ const MusicPattern = ({ className }: { className?: string }) => (
 export default function NotesbyAryan() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-black-100">
-      {/* Floating Back Button */}
-      <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
-        className="fixed left-4 top-4 z-50 md:left-6 md:top-6"
-      >
-        <Link
-          href="/"
-          className="group flex items-center gap-2 rounded-full border border-purple/30 bg-black-100/80 px-4 py-2.5 backdrop-blur-md transition-all duration-300 hover:border-purple hover:bg-purple/10 hover:shadow-[0_0_20px_rgba(203,172,249,0.2)]"
-        >
-          <FaArrowLeft className="text-sm text-purple transition-transform duration-300 group-hover:-translate-x-1" />
-          <span className="text-sm font-medium text-white-200 transition-colors group-hover:text-white">
-            Portfolio
-          </span>
-          <IoHome className="text-sm text-white-200/50" />
-        </Link>
-      </motion.div>
+      <FloatingNav navItems={navItems} />
 
       {/* Spotlights - matching main portfolio */}
       <div>
@@ -203,7 +108,15 @@ export default function NotesbyAryan() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <div className="relative z-10 mx-auto max-w-6xl px-6 pt-36 pb-16 md:pb-24">
+        <Link
+          href="/"
+          className="mb-8 inline-flex items-center gap-2 text-sm text-purple hover:text-white transition-colors"
+        >
+          <FaArrowLeft className="text-xs" />
+          Back to Home
+        </Link>
+
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0 }}

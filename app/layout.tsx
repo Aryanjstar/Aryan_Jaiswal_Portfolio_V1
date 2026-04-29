@@ -4,8 +4,6 @@ import type { PropsWithChildren } from "react";
 
 import { siteConfig } from "@/config";
 
-import { ThemeProvider } from "./provider";
-
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
@@ -19,11 +17,9 @@ export const metadata: Metadata = siteConfig;
 
 const RootLayout = ({ children }: Readonly<PropsWithChildren>) => {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" className="dark">
       <body className={inter.className} style={{ backgroundColor: "#000319" }}>
-        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

@@ -37,6 +37,13 @@ import {
 	SiKubernetes,
 	SiJest,
 	SiCypress,
+	SiDjango,
+	SiFastapi,
+	SiPostgresql,
+	SiPrometheus,
+	SiGrafana,
+	SiAnsible,
+	SiNginx,
 } from "react-icons/si";
 import {
 	FaJava,
@@ -62,6 +69,7 @@ export const Resume = () => {
 			degree: "Bachelor of Technology in Computer Science and Engineering",
 			duration: "2022 - 2026",
 			location: "Dharwad, Karnataka",
+			cgpa: "CGPA: 7.76/10",
 		},
 	];
 
@@ -72,8 +80,9 @@ export const Resume = () => {
 			duration: "Oct 2025 – Present",
 			location: "Remote",
 			responsibilities: [
-				"Built full-stack Custom TestCase & Scenario Management using FastAPI, Redis (persistent storage) and React/TypeScript; implemented CRUD APIs, embedded scenarios, additions, KPI configs, UUID/timestamp, and Redis-backed job execution.",
-				"Integrated system with test pipeline: WebSocket real-time updates, cron-driven post-call analysis, secure tunneling via Cloudflare/Ngrok, Redis orchestration, automated job orchestration pipelines, and test recording ingestion for verification.",
+				"Built Argus, a Gemini-powered Google Chat bot for voicebot debugging with tool-calling NL interface, audio latency analysis, and Splunk alert automation that reduced alert noise by 40%; cut debugging from hours to minutes.",
+				"Hardened LLM execution pipeline using asyncio.wait_for (7s timeout), parallel tool-call guards, and LangGraph greeting-state injection; eliminated silent-call incidents and shipped BlueDart voicebot live with 150,000 monthly calls.",
+				"Architected nginx WebSocket load balancing achieving 8× capacity (1,024 max connections); built Prometheus/Grafana monitoring with 30s real-time alerts, Ansible roles cutting provisioning from hours to minutes, and LLM timeout metrics.",
 			],
 		},
 		{
@@ -82,8 +91,8 @@ export const Resume = () => {
 			duration: "Oct 2025",
 			location: "Remote",
 			responsibilities: [
-				"Developed and deployed an RAG-based automation pipeline using n8n, Gemini embeddings, and PostgreSQL (pgvector); parsed email threads, extracted entities, and indexed 384-d vectors for contextual retrieval in AI-driven workflows.",
-				"Integrated LLM summarization, WhatsApp and Telegram alerts, automated monitoring, and reports with insights.",
+				"Engineered and productionized a scalable RAG-based automation pipeline using n8n, Gemini embeddings, and PostgreSQL (pgvector); parsed email threads, extracted entities, and indexed 384-d vectors, reducing manual processing time by 60%.",
+				"Integrated LLM summarization, WhatsApp and Telegram alerts, and reports, improving response turnaround time by 50%.",
 			],
 		},
 		{
@@ -92,8 +101,8 @@ export const Resume = () => {
 			duration: "Jan 2025",
 			location: "Remote",
 			responsibilities: [
-				"Led usability redesign reducing navigation confusion by 40% through revamped Figma workflows, improved IA, component libraries, and developer handoffs; coordinated design docs and interactive prototypes for rapid implementation.",
-				"Conducted research with 15+ users, synthesized feedback into A/B-testable prototypes that increased engagement by 30%.",
+				"Led usability redesign reducing navigation confusion by 40% through revamped Figma workflows, improved IA, design-system components, cross-functional developer handoffs; coordinated design docs and interactive prototypes for rapid implementation.",
+				"Conducted research with 15+ users, synthesized feedback into A/B-testable prototypes increasing engagement by 30%.",
 			],
 		},
 		{
@@ -102,13 +111,50 @@ export const Resume = () => {
 			duration: "Mar 2024 – June 2024",
 			location: "Remote",
 			responsibilities: [
-				"Built and productionized a CNN-based plant disease classifier with Python and Flask REST APIs; developed reproducible training pipelines on 60,000+ images, applied augmentations and class-weighting, achieving 90% accuracy and 92% precision.",
-				"Optimized backend and deployment to improve reliability and latency—cut API time by 50% and load by 30%—via JWT auth, async queues, Redis caching, batched queries, Docker CI/CD, and k-fold validation for inference stability.",
+				"Implemented and deployed a CNN-based plant-disease classifier using Python and Flask REST APIs; built scalable training pipelines for 60,000+ images with augmentations and class-weighting, achieving 90% accuracy and 92% precision.",
+				"Enhanced backend and deployment to improve reliability and latency — cut API time by 50% and load by 30% via JWT auth, async queues, Redis caching, batched queries, Docker CI/CD, and k-fold validation for inference stability.",
 			],
 		},
 	];
 
 	const projects = [
+		{
+			title: "Cognitive-OS",
+			technologies: [
+				{ name: "Next.js", icon: <SiNextdotjs className="w-4 h-4" /> },
+				{ name: "TypeScript", icon: <SiTypescript className="w-4 h-4" /> },
+				{ name: "Python", icon: <SiPython className="w-4 h-4" /> },
+				{ name: "Azure", icon: <FaMicrosoft className="w-4 h-4" /> },
+				{ name: "LangChain", icon: <FaLink className="w-4 h-4" /> },
+			],
+			links: {
+				live: "https://cognitive-os-app.wonderfulfield-ff10e83d.centralindia.azurecontainerapps.io/",
+				github: "https://github.com/Aryanjstar/Cognitive-OS",
+			},
+			description: [
+				"Built a developer cognitive operating system that models mental workload using 7 research-grade formulas, tracking context switches, focus time, and cognitive load across GitHub activity with real-time analytics refreshing every 6 hours.",
+				"Deployed on Azure Container Apps with Next.js frontend and Python backend; features AI-powered task sequencing, interrupt guard agent, and cognitive analytics heatmaps — designed to save 3-5 hours of cognitive recovery time per week.",
+			],
+		},
+		{
+			title: "AURA – Agentic Finance AI",
+			technologies: [
+				{ name: "Azure OpenAI", icon: <SiOpenai className="w-4 h-4" /> },
+				{ name: "Node.js", icon: <SiNodedotjs className="w-4 h-4" /> },
+				{ name: "MongoDB", icon: <SiMongodb className="w-4 h-4" /> },
+				{ name: "LangChain", icon: <FaLink className="w-4 h-4" /> },
+				{ name: "React.js", icon: <SiReact className="w-4 h-4" /> },
+			],
+			links: {
+				live: "https://aura-finance-ai.azurewebsites.net",
+				github: "https://github.com/Aryanjstar/AURA---THE-FINANCE-AI",
+				demo: "https://www.youtube.com/watch?v=3q4uTliRNr8",
+			},
+			description: [
+				"Developed a multi-agent AI platform with 5 agents using GPT-4.1 and RAG (embeddings, cosine similarity), orchestrated via an A2A shared-context protocol with parallel execution and MCP integration to Fi.Money's live financial API (6 tools).",
+				"Deployed on Azure App Service with MongoDB Atlas persistence, LangSmith tracing, and Socket.IO streaming; dynamic scaling serves simple queries in 2 agents and complex planning in 5 parallel, achieving 3–8s latency at 99.9% uptime.",
+			],
+		},
 		{
 			title: "DevTinder",
 			technologies: [
@@ -121,28 +167,11 @@ export const Resume = () => {
 			links: {
 				live: "https://black-cliff-0fbc18c0f.3.azurestaticapps.net/",
 				github: "https://github.com/Aryanjstar/DevTinder",
+				demo: "https://www.youtube.com/watch?v=t0ggxZnVgTQ",
 			},
 			description: [
 				"Engineered a scalable MERN-based developer matching platform using vectorized skill embeddings with ANN search, optimized indexing and caching for low-latency queries, and built real-time chat using Socket.IO for seamless collaboration.",
-				"Implemented secure JWT + Google OAuth authentication, integrated Razorpay webhooks, deployed backend on Azure via CI/CD using Docker, and crafted a mobile-first, component-driven responsive UI with Tailwind CSS for enhanced UX.",
-			],
-		},
-		{
-			title: "AURA – Agentic AI for Finance",
-			technologies: [
-				{ name: "Node.js", icon: <SiNodedotjs className="w-4 h-4" /> },
-				{ name: "Python", icon: <SiPython className="w-4 h-4" /> },
-				{ name: "React.js", icon: <SiReact className="w-4 h-4" /> },
-				{ name: "GCP", icon: <SiGooglecloud className="w-4 h-4" /> },
-			],
-			links: {
-				demo: "https://youtu.be/48CdosQA8H4",
-				github: "https://github.com/Aryanjstar/AURA---THE-FINANCE-AI",
-			},
-			description: [
-				"Constructed a scalable multi-agent AI system with five specialized agents (Strategist, Quant, Advisor, etc.) using the Google Gemini API to deliver personalized financial strategies in real-time.",
-				"Engineered a microservices-based platform deployed on Google Cloud App Engine, integrating a secure Go-based MCP server for processing unstructured financial data.",
-				"Built a real-time analytics dashboard with React.js and D3.js, integrating LLM-driven sentiment analysis to automate insights and reduce manual review time by 90%.",
+				"Implemented secure JWT + Google OAuth authentication, integrated Razorpay webhooks, deployed backend on Azure via CI/CD using Docker, and built a mobile-first, component-driven responsive UI with Tailwind CSS for improved UX.",
 			],
 		},
 		{
@@ -157,10 +186,11 @@ export const Resume = () => {
 			links: {
 				live: "https://ai-career-navigator-backend.azurewebsites.net",
 				github: "https://github.com/Aryanjstar/AI-Career-Navigator",
+				demo: "https://www.youtube.com/watch?v=t_e-CtLxn_Q",
 			},
 			description: [
-				"Designed and productionized a comprehensive AI career assistant using Azure OpenAI GPT-4.1 with RAG (chunking, embeddings, vector store) and dynamic interview generators; validated by 100+ users for resume feedback and gap analysis.",
-				"Deployed and optimized microservices on Azure App Service with queue workers and Azure AI Search, ensuring 99% uptime while handling 500+ operations via batching and sharding; integrated A/B pipelines, reducing user prep time by 60%.",
+				"Architected and deployed a scalable AI career assistant using Azure OpenAI GPT-4.1 with RAG (chunking, embeddings, vector store) and dynamic interview generators; validated by 100+ users for resume feedback and gap analysis.",
+				"Deployed and scaled microservices on Azure App Service with queue workers and Azure AI Search, ensuring 99% uptime while handling 500+ requests via batching and sharding; integrated A/B pipelines, reducing user prep time by 60%.",
 			],
 		},
 	];
@@ -174,6 +204,7 @@ export const Resume = () => {
 			{ name: "Algorithms", icon: <FaBrain className="w-5 h-5" /> },
 			{ name: "OOP", icon: <FaLaptopCode className="w-5 h-5" /> },
 			{ name: "Operating Systems", icon: <FaCog className="w-5 h-5" /> },
+			{ name: "System Design", icon: <FaServer className="w-5 h-5" /> },
 			{ name: "Java", icon: <FaJava className="w-5 h-5" /> },
 			{ name: "Python", icon: <SiPython className="w-5 h-5" /> },
 			{ name: "C++", icon: <SiCplusplus className="w-5 h-5" /> },
@@ -181,6 +212,7 @@ export const Resume = () => {
 		],
 		Frontend: [
 			{ name: "React", icon: <SiReact className="w-5 h-5" /> },
+			{ name: "Next.js", icon: <SiNextdotjs className="w-5 h-5" /> },
 			{ name: "HTML", icon: <SiHtml5 className="w-5 h-5" /> },
 			{ name: "CSS", icon: <SiCss3 className="w-5 h-5" /> },
 			{ name: "Tailwind CSS", icon: <SiTailwindcss className="w-5 h-5" /> },
@@ -191,10 +223,12 @@ export const Resume = () => {
 		"Backend & APIs": [
 			{ name: "Node.js", icon: <SiNodedotjs className="w-5 h-5" /> },
 			{ name: "Express", icon: <SiExpress className="w-5 h-5" /> },
+			{ name: "Django", icon: <SiDjango className="w-5 h-5" /> },
+			{ name: "FastAPI", icon: <SiFastapi className="w-5 h-5" /> },
 			{ name: "Flask", icon: <SiFlask className="w-5 h-5" /> },
 			{ name: "RESTful APIs", icon: <FaServer className="w-5 h-5" /> },
 			{ name: "MongoDB", icon: <SiMongodb className="w-5 h-5" /> },
-			{ name: "MySQL", icon: <SiMysql className="w-5 h-5" /> },
+			{ name: "PostgreSQL", icon: <SiPostgresql className="w-5 h-5" /> },
 			{ name: "Redis", icon: <SiRedis className="w-5 h-5" /> },
 		],
 		"Cloud & DevOps": [
@@ -203,10 +237,14 @@ export const Resume = () => {
 			{ name: "GCP", icon: <SiGooglecloud className="w-5 h-5" /> },
 			{ name: "Docker", icon: <SiDocker className="w-5 h-5" /> },
 			{ name: "Kubernetes", icon: <SiKubernetes className="w-5 h-5" /> },
+			{ name: "Nginx", icon: <SiNginx className="w-5 h-5" /> },
 			{ name: "CI/CD", icon: <FaCodeBranch className="w-5 h-5" /> },
 			{ name: "Linux", icon: <SiLinux className="w-5 h-5" /> },
 		],
-		"Testing & Tools": [
+		"Monitoring & Tools": [
+			{ name: "Prometheus", icon: <SiPrometheus className="w-5 h-5" /> },
+			{ name: "Grafana", icon: <SiGrafana className="w-5 h-5" /> },
+			{ name: "Ansible", icon: <SiAnsible className="w-5 h-5" /> },
 			{ name: "Git", icon: <SiGit className="w-5 h-5" /> },
 			{ name: "GitHub", icon: <SiGithub className="w-5 h-5" /> },
 			{ name: "Postman", icon: <SiPostman className="w-5 h-5" /> },
@@ -214,25 +252,27 @@ export const Resume = () => {
 			{ name: "Cypress", icon: <SiCypress className="w-5 h-5" /> },
 		],
 		"AI/ML & Libraries": [
-			{ name: "LLM", icon: <SiOpenai className="w-5 h-5" /> },
+			{ name: "LLMs / RAG", icon: <SiOpenai className="w-5 h-5" /> },
+			{ name: "MCP / A2A", icon: <FaLink className="w-5 h-5" /> },
+			{ name: "LangChain", icon: <FaLink className="w-5 h-5" /> },
 			{ name: "TensorFlow", icon: <SiTensorflow className="w-5 h-5" /> },
 			{ name: "PyTorch", icon: <SiPytorch className="w-5 h-5" /> },
 			{ name: "scikit-learn", icon: <SiScikitlearn className="w-5 h-5" /> },
+			{ name: "Hugging Face", icon: <FaRobot className="w-5 h-5" /> },
 			{ name: "Pandas", icon: <SiPandas className="w-5 h-5" /> },
 			{ name: "NumPy", icon: <SiNumpy className="w-5 h-5" /> },
-			{ name: "Hugging Face", icon: <FaRobot className="w-5 h-5" /> },
-			{ name: "LangChain", icon: <FaLink className="w-5 h-5" /> },
 		],
 	};
 
 	const achievements = [
-		"Spotlight Award Winner – Microsoft JS AI Build-a-thon: As a Troop Lead, I mentored 80+ developers and led the creation of AI Career Navigator to assist students in job and internship preparation.",
-		"Finalist – Google Cloud Agentic AI Day Hackathon: Among top 3.5% (2,000/57,000+) for building AURA, a multi-agent financial platform using Gemini, Node.js, Go, and Fi's Model Context Protocol (MCP) server.",
-		"Letter of Recommendation (Microsoft): Received LOR from Pablo Veramendi, Global Director, Audience Evangelism at Microsoft, recognizing contributions in event organization, workshop creation, community outreach, and mentoring.",
+		"Research Paper Author – COMSNETS 2026 (Main Conference): Published & Presented \"A Bid-Driven Optimization Framework for Real-Time Electric Vehicle Charging Scheduling\" at the main conference in Bengaluru.",
+		"People's Choice & Overall Winner – Microsoft JS AI Build-a-thon: As a Troop Lead, mentored 80+ developers and led the creation of AI Career Navigator to assist students in job and internship preparation.",
+		"Finalist – Google Cloud Agentic AI Day Hackathon: Led team to top 3.5% (2,000/57,000+) building AURA, a multi-agent financial platform using Gemini, Node.js, Go, and Fi's Model Context Protocol (MCP) server.",
+		"LOR from Microsoft + AI-900 Certified: Received Letter of Recommendation from Pablo Veramendi, Global Director at Microsoft; AI-900 certification validating AI, ML, CV, NLP and GenAI expertise.",
+		"Founder & Former President – MSA IIIT Dharwad: Led the official community as the only Gold Startup Scout at Microsoft in India, managed 60+ core team, grew MSA Nexus to 500+ members.",
+		"Competitive Programming: GFG college rank 4; solved 500+ DSA problems with a 1-year streak on LeetCode and GFG.",
 		"Finalist – Level Supermind Hackathon: Top 2% (500/25,000+) for BuzzHive, an AI-driven social media analytics platform.",
-		"Gold-MSA, Founder & President – MSA Chapter, IIIT Dharwad: As a Gold Microsoft Student Ambassador, led the official community, managed a 60+ core team, and grew MSA Nexus to 350+ members for tech support and learning.",
-		"Competitive Programming: GFG college rank 8; solved 400+ DSA problems with a 1-year streak on LeetCode and GFG.",
-		"IIITians Network: Key contributor to India's largest IIIT students network (50k+ members); drove growth and engagement while continuing to support initiatives, share ideas, and strengthen collaboration across the community.",
+		"IIITians Network: Key contributor to India's largest IIIT students network (50k+ members); drove growth and engagement across the community.",
 	];
 
 	return (
@@ -243,9 +283,9 @@ export const Resume = () => {
 						My <span className="text-purple">Resume</span>
 					</h1>
 
-					<Link href="/Aryan_Resume.pdf" target="_blank" rel="noreferrer noopener">
+					<Link href="/Aryan_CV.pdf" target="_blank" rel="noreferrer noopener">
 						<MagicButton
-							title="Resume"
+							title="Download Resume"
 							icon={<FaDownload />}
 							position="right"
 							asChild
@@ -259,12 +299,15 @@ export const Resume = () => {
 						<h2 className="text-4xl font-bold text-white mb-2">
 							Aryan Jaiswal
 						</h2>
-						<p className="text-lg text-white-200 mb-4">
-							Computer Science Student & Full Stack Developer
+						<p className="text-lg text-white-200 mb-2">
+							Software Engineer | AI/ML | Full Stack Developer
+						</p>
+						<p className="text-sm text-purple mb-4">
+							Published Researcher (COMSNETS 2026) &bull; Microsoft Build-a-thon Winner
 						</p>
 						<div className="flex justify-center space-x-6 text-white-200 flex-wrap">
 							<span>📧 aryanjstar3@gmail.com</span>
-							<span>📍 Brijmanganj, Uttar Pradesh</span>
+							<span>📍 Bengaluru, Karnataka</span>
 						</div>
 						<div className="flex justify-center space-x-4 mt-4 flex-wrap">
 							<Link
@@ -302,6 +345,21 @@ export const Resume = () => {
 						</div>
 					</div>
 
+					{/* Professional Summary */}
+					<div>
+						<h3 className="text-2xl font-bold text-purple mb-6">
+							Professional Summary
+						</h3>
+						<p className="text-white-100 leading-relaxed border-l-2 border-purple pl-6">
+							Final-year CS student with production GenAI, ML and full-stack
+							experience; shipped voicebot infrastructure serving 1.5L+ monthly
+							calls, built AI-native internal tooling adopted across teams, and
+							engineered a self-healing auto-loop enabling autonomous bot updates
+							with zero human intervention. Published at COMSNETS 2026; Microsoft
+							Build-a-thon winner.
+						</p>
+					</div>
+
 					{/* Education */}
 					<div>
 						<h3 className="text-2xl font-bold text-purple mb-6">Education</h3>
@@ -314,6 +372,7 @@ export const Resume = () => {
 									<p className="text-white-200 mb-1">{edu.institution}</p>
 									<div className="flex justify-between text-white-100 flex-wrap">
 										<span>{edu.duration}</span>
+										<span>{edu.cgpa}</span>
 										<span>{edu.location}</span>
 									</div>
 								</div>

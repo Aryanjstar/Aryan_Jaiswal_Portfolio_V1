@@ -40,21 +40,17 @@ export const Footer = () => {
 					Let&apos;s connect and explore opportunities together!
 				</p>
 
-				<button
-					onClick={handleEmailClick}
-					className="md:mt-10 cursor-pointer"
-				>
-					<MagicButton
-						title="Let's get in touch"
-						icon={<FaLocationArrow />}
-						position="right"
-						asChild
-					/>
-				</button>
+				<MagicButton
+					title="Let's get in touch"
+					icon={<FaLocationArrow />}
+					position="right"
+					handleClick={handleEmailClick}
+					otherClasses="md:mt-10"
+				/>
 			</div>
 
 			<div className="relative z-10 mt-16 flex flex-col items-center justify-between gap-6 md:flex-row md:gap-0">
-				<p className="text-center text-sm font-light md:text-left md:text-base md:font-normal">
+				<p className="text-center text-sm font-light text-white md:text-left md:text-base md:font-normal">
 					Copyright &copy; {new Date().getFullYear()}{" "}
 					<Link
 						href={links.ownerInstagram}

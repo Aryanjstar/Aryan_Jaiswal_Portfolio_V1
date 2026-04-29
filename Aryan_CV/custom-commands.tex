@@ -1,0 +1,65 @@
+%-------------------------
+% Custom Resume Commands
+%-------------------------
+
+% Resume item (bullet point)
+\newcommand{\resumeItem}[1]{
+  \item \small{#1}
+}
+
+% Resume subheading (e.g. role and company)
+\newcommand{\resumeSubheading}[4]{
+  \item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{#2} \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}
+  \vspace{-5pt}
+}
+
+% Sub-subheading (e.g. designation in club/project)
+\newcommand{\resumeSubSubheading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textit{\small #1} & \textit{\small #2} \\
+  \end{tabular*}
+  \vspace{-5pt}
+}
+
+% Project Heading
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \small \textbf{#1} & \textit{\small #2} \\
+  \end{tabular*}
+  \vspace{-5pt}
+}
+
+% Sub Item inside bullet list
+\newcommand{\resumeSubItem}[1]{
+  \resumeItem{#1}
+}
+
+% Bullet character customization
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% List wrappers
+\newcommand{\resumeSubHeadingListStart}{
+  \begin{itemize}[leftmargin=0.15in, label={}]
+}
+\newcommand{\resumeSubHeadingListEnd}{
+  \end{itemize}
+}
+\newcommand{\resumeItemListStart}{
+  \begin{itemize}[leftmargin=0.1in]
+}
+\newcommand{\resumeItemListEnd}{
+  \end{itemize}
+  \vspace{-5pt}
+}
+
+% Optional icon utility (currently not used in ATS resumes)
+\definecolor{Black}{RGB}{0, 0, 0}
+\newcommand{\seticon}[1]{
+  \textcolor{Black}{\csname #1\endcsname}
+}

@@ -103,12 +103,7 @@ export const InfiniteMovingCards = ({
 					items.length > 0 &&
 					items.map((item, idx) => (
 						<li
-							className="relative w-[90vw] max-w-full flex-shrink-0 rounded-2xl border border-b-0 border-slate-800 p-5 md:w-[60vw] md:p-16"
-							style={{
-								background: "rgb(4,7,29)",
-								backgroundColor:
-									"linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-							}}
+							className="relative w-[90vw] max-w-full flex-shrink-0 rounded-2xl border border-b-0 p-5 md:w-[60vw] md:p-16 border-slate-800 bg-[rgb(4,7,29)]"
 							key={idx}
 						>
 							<blockquote>
@@ -116,20 +111,17 @@ export const InfiniteMovingCards = ({
 									aria-hidden="true"
 									className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
 								/>
-								<span className=" relative z-20 text-sm font-normal leading-[1.6] text-white md:text-lg">
+								<span className="relative z-20 text-sm font-normal leading-[1.6] text-white md:text-lg">
 									{item.quote}
 								</span>
 
 								<div className="relative z-20 mt-6 flex flex-row items-center">
 									<div className="me-3">
-										{/* Ensure each testimonial can have a unique image */}
 										<Image
 											height={50}
 											width={50}
-											// Check if the item has an image and use it, or fall back to default image
 											src={item.image || "/profile.svg"}
 											alt={item.name}
-											// You can optionally set a fallback image in the alt tag or default image as needed
 										/>
 									</div>
 
@@ -138,18 +130,17 @@ export const InfiniteMovingCards = ({
 											{item.name}
 										</span>
 
-										<span className=" text-sm font-normal leading-[1.6] text-white-200">
+										<span className="text-sm font-normal leading-[1.6] text-white-200">
 											{item.title}
 										</span>
 
-										{/* Add links if available */}
 										<div className="flex flex-wrap gap-2 mt-2">
 											{(item as any).link && (
 												<a
 													href={(item as any).link}
 													target="_blank"
 													rel="noreferrer noopener"
-													className="text-xs text-purple hover:text-white-100 transition-colors underline"
+													className="text-xs dark:text-purple text-blue-600 hover:text-blue-800 dark:hover:text-white-100 transition-colors underline"
 												>
 													View Certificate
 												</a>
@@ -159,7 +150,7 @@ export const InfiniteMovingCards = ({
 													href={(item as any).featuredLink}
 													target="_blank"
 													rel="noreferrer noopener"
-													className="text-xs text-purple hover:text-white-100 transition-colors underline"
+													className="text-xs dark:text-purple text-blue-600 hover:text-blue-800 dark:hover:text-white-100 transition-colors underline"
 												>
 													Featured Video
 												</a>

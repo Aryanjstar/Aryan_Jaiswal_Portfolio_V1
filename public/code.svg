@@ -1,50 +1,7 @@
-<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<linearGradient id="codeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-<stop offset="0%" style="stop-color:#FF00C1;stop-opacity:1" />
-<stop offset="100%" style="stop-color:#F4AC24;stop-opacity:1" />
-</linearGradient>
-<linearGradient id="codeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-<stop offset="0%" style="stop-color:#A76DFC;stop-opacity:1" />
-<stop offset="100%" style="stop-color:#5C1CB2;stop-opacity:1" />
-</linearGradient>
-</defs>
-
-<!-- Background Circle -->
-<circle cx="60" cy="60" r="55" fill="url(#codeGrad2)" opacity="0.15"/>
-
-<!-- Terminal/Code Window -->
-<rect x="20" y="30" width="80" height="55" rx="4" fill="url(#codeGrad2)" opacity="0.3"/>
-<rect x="22" y="32" width="76" height="51" rx="3" fill="#00042D"/>
-
-<!-- Terminal dots -->
-<circle cx="28" cy="38" r="2" fill="#FF5F56"/>
-<circle cx="36" cy="38" r="2" fill="#FFBD2E"/>
-<circle cx="44" cy="38" r="2" fill="#27C93F"/>
-
-<!-- Code brackets < > -->
-<path d="M 35 55 L 28 60 L 35 65" stroke="url(#codeGrad1)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M 85 55 L 92 60 L 85 65" stroke="url(#codeGrad1)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-
-<!-- Code slash -->
-<line x1="55" y1="52" x2="65" y2="68" stroke="url(#codeGrad1)" stroke-width="3" stroke-linecap="round"/>
-
-<!-- Binary code pattern -->
-<text x="42" y="56" fill="#A76DFC" font-family="monospace" font-size="8" opacity="0.6">1010</text>
-<text x="42" y="64" fill="#FF00C1" font-family="monospace" font-size="8" opacity="0.6">0110</text>
-<text x="42" y="72" fill="#A76DFC" font-family="monospace" font-size="8" opacity="0.6">1101</text>
-
-<!-- Trophy/Achievement -->
-<path d="M 52 90 L 48 93 L 48 98 L 72 98 L 72 93 L 68 90 Z" fill="url(#codeGrad1)"/>
-<rect x="50" y="98" width="20" height="6" rx="1" fill="#5C1CB2"/>
-<path d="M 55 83 L 55 90 L 65 90 L 65 83 C 65 80 63 78 60 78 C 57 78 55 80 55 83 Z" fill="url(#codeGrad1)"/>
-
-<!-- Rank badge -->
-<circle cx="95" cy="25" r="15" fill="url(#codeGrad1)"/>
-<text x="95" y="31" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="700">8</text>
-
-<!-- Terminal cursor -->
-<rect x="70" y="58" width="2" height="8" fill="#F4AC24" opacity="0.8">
-<animate attributeName="opacity" values="0.8;0.2;0.8" dur="1s" repeatCount="indefinite"/>
-</rect>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="12" fill="#1a1a3e"/>
+  <path d="M35 35 L20 50 L35 65" stroke="#34d399" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M65 35 L80 50 L65 65" stroke="#34d399" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="55" y1="30" x2="45" y2="70" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="50" y="90" text-anchor="middle" font-family="monospace" font-size="7" fill="#94a3b8">500+ DSA</text>
 </svg>
