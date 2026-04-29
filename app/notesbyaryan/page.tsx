@@ -25,7 +25,7 @@ const performances = [
   },
   {
     id: 14,
-    title: "Rakh Loon Chupa Ke Main Tumhe",
+    title: "Rakh Loon Chupa Ke",
     titleHindi: "दिल की तिजोरी में छुपा लूँ तुझे",
     description: "मुझसे ये हर घड़ी, मेरा दिल कहे 💗",
     vibe: "तुम ही मेरी हर जुस्तजू… तुम ही आरज़ू 🫶🏻",
