@@ -283,7 +283,7 @@ export const Resume = () => {
 						My <span className="text-purple">Resume</span>
 					</h1>
 
-					<Link href="/Aryan_CV.pdf" target="_blank" rel="noreferrer noopener">
+					<Link href="/Aryan_Resume.pdf" target="_blank" rel="noreferrer noopener">
 						<MagicButton
 							title="Download Resume"
 							icon={<FaDownload />}

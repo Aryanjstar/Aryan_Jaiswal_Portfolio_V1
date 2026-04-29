@@ -199,7 +199,7 @@ export const testimonials = [
 		quote: `I had the honor of presenting my project as a Plant Disease Classification Intern at the inaugural Infosys Springboard Summit in Bangalore. Alongside my teammates, we showcased our work to industry leaders like Nandan Nilekani and Dr. Pramod Varma. Due to my outstanding performance during the internship, I was given a special invite and a felicitation.`,
 		name: "Infosys Springboard",
 		title: "Plant Disease Classification Project Intern",
-		image: "/infosys.svg",
+		image: "/profile.svg",
 	},
 	{
 		quote: `Successfully completed Levels 1 and 2 of the Microsoft AI Odyssey Challenge in January 2024, with certification in February. Among the 5% of participants to achieve this, I gained hands-on expertise in Azure Vision, AI Document Intelligence, and AI Language. Featured on Azure Developer Community's YouTube channel.`,
